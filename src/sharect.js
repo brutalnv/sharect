@@ -148,7 +148,7 @@ const Sharect = (function() {
     }
 
     function isSelectableElement() {
-      let currentSelectedElement = window.getSelection().baseNode.parentNode
+      let currentSelectedElement = window.getSelection().anchorNode.parentNode
       return _selectableElements.some(function(ancestor) {
         return getClosestElement(currentSelectedElement, ancestor)
       })
